@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1; minimal-ui">
+<meta name="description" content="The official website of artist Ed Charbonneau.">
+<meta property="og:image" content="//jonreischl.com/images/ogpreview-canyoneers.jpg" />
+<meta property="og:url" content="//jonreischl.com" />
+<meta property="og:title" content="Ed Charbonneau, Artist" />
+<meta property="og:description" content="The official website of artist Ed Charbonneau." />
+<title>Ed Charbonneau | Artist</title>
+<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="manifest" href="/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="css/style.css?1" rel="stylesheet" type="text/css">
+<style>
+a.thumb {
+    display: none;
+}
+.full.spinning {
+    background: url(images/spinner.gif) no-repeat center center;
+}
+.filter {
+    display: block;
+    margin-top: 5px;
+}
+.unfilter {
+    text-align: center;
+    display: none;
+}
+select {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+
+.thumbs {
+    padding-top: 0;
+}
+.trigger {
+    cursor: pointer;
+}
+
+/* Small devices  */
+@media (max-width: 767px) {
+}
+</style>
+</head>
+
+<body>
+<a class="close material-symbols-outlined" href="#close">cancel</a>
+<div class="backdrop"></div>
+<div class="stage">
+  <div class="nav">
+    <div class="pad"><a href="/">Ed Charbonneau</a> <img alt="Toggle menu" class="burger" src="images/menu.png">
+      <div class="menu"><a href="/?#art"><strong>Studio Paintings</strong></a> <a href="pages/about-ed-charbonneau.html">Murals &amp; Collaborations</a> <a href="pages/choromosphere-podcast.html">Chromosphere</a> </div>
+    </div>
+  </div>
+  <main>
+    <div class="full"><a class="caption-toggle material-symbols-outlined"></a>
+      <div class="intro">
+        <div class="inset">
+          <h1>Ed Charbonneau</h1>
+          <h2>studio Paintings&nbsp;</h2>
+        </div>
+
+<!--<div class="alert" style="font-weight: 300;  line-height: 2rem"><span style="text-transform: uppercase;letter-spacing: 2px;">Saturday Nov 1, 2025, 3-8PM</span>
+          <div style=""><span style="font-size: 1.4rem; font-weight: 500">Open Studio</span> <br>
+<span style="text-transform: uppercase;letter-spacing: 2px;">Rock9 Art Studio | St. Paul</span></div>
+          <a href="exhibits.html" style="
+    font-weight: 400; display: flex; align-items: center;justify-content: center; letter-spacing: 1px"> DETAILS <span class="material-symbols-outlined">
+chevron_right
+</span></a> </div>-->
+        <style>
+			.alert {
+    padding: 1rem;
+    background: #fff;
+    margin: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+			</style>
+</div>
+  
+      <div class="frame"></div>
+      <div class="caption"><span class="specs">This is the caption</span> <a class="popout material-symbols-outlined" href="#" target="_blank" style="font-size: 24px">open_in_new</a></div>
+    </div>
+    <div id="thumb_container">
+      
+      <div id="placeholder" class="thumbs"></div>
+    </div>
+    <small class="legal">&copy; Ed Charbonneau <script>var d=new Date(); yr=d.getFullYear();if (yr!=1998)document.write(""+yr);</script>. All rights reserved.</small> </main>
+</div>
+	
+<script src="//code.jquery.com/jquery.js"></script> 
+<script src="js/jquery.touchwipe.1.1.1.js"></script> 
+<script src="js/jquery.lazyload.min.js"></script> 
+<script>
+    var data = { "pieces":[            
+					
+  {
+    "file": "10",
+    "caption": "Unusaul Landscape #5, oil on canvas, 60\" x 72\", 2016 (Collection of Minnesota Vikings at US Bank Stadium.)"
+  },
+  {
+    "file": "9",
+    "caption": "Unusaul Landscape #4, oil on canvas, 60\" x 72\", 2016 (Collection of Minnesota Vikings at US Bank Stadium.)"
+  },
+  {
+    "file": "Wake-1_acrylic-on-canvas_52x78_2017",
+    "caption": "Wake #1, acrylic on canvas, 52\" x 78\", 2017 "
+  },
+  {
+    "file": "Wake-2_acrylic-on-canvas_52x78_2017",
+    "caption": "Wake #2, acrylic on canvas, 52\" x 78\", 2017 (Private Collection)"
+  },
+  {
+    "file": "Untitled_Squeegee_Painting_no1_54x84inches_acrylic_on_canvas",
+    "caption": "Untitled Squeegee Painting #1, acrylic on canvas, 54\" x 84\", 2016"
+  },
+  {
+    "file": "Untitled_Squeegee_Painting_no2_66x48inches_acrylic_on_canvas",
+    "caption": "Untitled Squeegee Painting #2, acrylic on canvas, 66\" x 48\", 2016"
+  },
+  {
+    "file": "The_Plight_of_the_Bumblebee_No1_acrylic_on_canvas_72x90inches",
+    "caption": "The Plight of the Bumblebee #1, acrylic on canvas, 72\" x 90\" (Private collection.)"
+  },
+  {
+    "file": "PlightoftheBumblebee2_acrylic_on_canvas_22x22inches_2017",
+    "caption": "The Plight of the Bumblebee #2, acrylic on canvas, 72\" x 90\" (Private collection.)"
+  },
+  {
+    "file": "PlightoftheBumblebee3_acrylic_on_canvas_22x22inches_2017",
+    "caption": "The Plight of the Bumblebee #3, acrylic on canvas, 72\" x 90\" "
+  },
+  {
+    "file": "PlightoftheBumblebee4_acrylic_on_canvas_22x22inches_2017",
+    "caption": "The Plight of the Bumblebee #4, acrylic on canvas, 72\" x 90\" (Private collection.)"
+  },
+  {
+    "file": "1_Color_Rectangles_oil_and_acrylic_on_canvas_58x89inches_2016",
+    "caption": "Particles, 58\"x89\", oil and acrylic on canvas, 2016 (Private collect)"
+  },
+  {
+    "file": "Grid_Warm_Shade_acrylic_and_oil_on_canvas_60x72inches_2016",
+    "caption": "Particles #2, oil on canvas, 60\" x 72\", 2016"
+  },
+  {
+    "file": "Grid_Cool_Shade_oil_and_acrylic_on_canvas_60x72inches_2016_1",
+    "caption": "Particles #3, oil on canvas, 60\" x 72\", 2016"
+  },
+  {
+    "file": "4",
+    "caption": "Morning Glory Suite No. 29, oil on canvas, 44\" x 64\", 2017"
+  },
+  {
+    "file": "5",
+    "caption": "Morning Glory Suite No. 27, oil on canvas, 43\" x 47.5\", 2017"
+  },
+  {
+    "file": "6",
+    "caption": "Morning Glory Suite No. 28, oil on canvas, 38.5\" x 54\", 2017"
+  },
+  {
+    "file": "Morning_Glory_Suite_No_26_oil_on_canvas_52x70_2016",
+    "caption": "Morning Glory Suite No. 26, oil on canvas, 52\" x 70\", 2016"
+  },
+  {
+    "file": "9_Untitled_oil_on_canvas_48x66",
+    "caption": "Morning Glory Suite No. 8, 48\"x66\", oil on canvas, 2016 (Private collection.)"
+  },
+  {
+    "file": "3_Large_Chartruese",
+    "caption": "Morning Glory Suite No. 9, 75.25\"x43.5\", oil on canvas, 2016 (Private collection.)"
+  },
+  {
+    "file": "4_Large_Silver_and_Black",
+    "caption": "Morning Glory Suite No. 10, 75.25\"x43.5\", oil on canvas, 2010 (Private collection)"
+  },
+  {
+    "file": "8_Small_Blue",
+    "caption": "Morning Glory Suite No. 21, 36\"x36\", oil on canvas, 2015"
+  },
+  {
+    "file": "7_Small_Blue_and_Black",
+    "caption": "Morning Glory Suite No. 22, 36\"x36\", oil on canvas, 2016 (Private collection.)"
+  },
+  {
+    "file": "6_Medium_Yellow",
+    "caption": "Morning Glory Suite No. 20, 38.25\"x54\", oil on canvas, 2015"
+  },
+  {
+    "file": "5_Medium_Orange",
+    "caption": "Morning Glory Suite no. 19, 38.25\"x54\", oil on canvas, 2015"
+  },
+  {
+    "file": "10_Small_Light_Blue_and_Black",
+    "caption": "Morning Glory Suite no. 23, 36\"x36\", oil on canvas, 2016 (Private collection.)"
+  },
+  {
+    "file": "11_Small_Yellow",
+    "caption": "Morning Glory Suite no 24, 36\"x36\", oil on canvas, 2016 (Private collection.)"
+  },
+  {
+    "file": "9_Small_Orange_and_Black",
+    "caption": "Morning Glory Suite no. 25, 36\"x36\", oil on canvas, 2016 (Private collection.)"
+  },
+  {
+    "file": "2_Unusual_Landscape_No_1_63x65_inches_oil_on_canvas_2010",
+    "caption": "Unusual Landscape No. 1, oil on canvas, 63\" x 65\", 2010 (On view at Holly Hunt, Minneapolis.)"
+  },
+  {
+    "file": "4_Delta_No_1_40x60_inches_mixed_media_2010",
+    "caption": "Delta No. 1, mixed media, 40\" x 60\", 2010"
+  },
+  {
+    "file": "5_Green_Lines_72x72_inches_acrylic_on_canvas_2013",
+    "caption": "Green Lines, acrylic on canvas, 72\" x 72\", 2013 (Unavailable)"
+  },
+  {
+    "file": "10_Pink_Lines_72x72_inches_acrylic_on_canvas_2013",
+    "caption": "Pink Lines, acrylic on canvas, 72\" x 72\", 2013 (Unavailable)"
+  },
+  {
+    "file": "11_Unusual_Landscape_No_5_24x30_inches_acrylic_on_canvas_2010",
+    "caption": "Unusual Landscape No. 5, acrylic on canvas, 24\" x 30\", 2010"
+  },
+  {
+    "file": "12_Unusual_Landscape_No_7_24x30_inches_acrylic_on_canvas_2015",
+    "caption": "Unusual Landscape No. 7, acrylic on canvas, 24\" x 30\", 2015"
+  },
+  {
+    "file": "The_Caribbean_Sea_No_1_72x84_inches_2015",
+    "caption": "The Caribbean Sea No. 1, oil on canvas, 72' x 84\", 2015 (Private collection.)"
+  },
+  {
+    "file": "The_Caribbean_Sea_No_3_48x66_2015",
+    "caption": "The Caribbean Sea No. 3, acrylic and oil on canvas, 48\" x 66\", 2015 (Private collection.)"
+  },
+  {
+    "file": "The_Caribbean_Sea_No_5_46x65_2015",
+    "caption": "The Caribbean Sea No. 4, acrylic and oil on canvas, 46\" x 65\", 2015 (Private collection.)"
+  },
+  {
+    "file": "The_Caribbean_Sea_No_2_48x66_inches_2015",
+    "caption": "The Caribbean Sea No. 2, acrylic and oil on canvas, 48\" x 66\", 2015"
+  },
+  {
+    "file": "The_Mississippi_at_Saint_Anthony_Falls_Bridge_No_4",
+    "caption": "The Mississippi at Saint Anthony Falls Bridge No. 4, acrylic and oil on canvas, 66\" x 48\", 2015"
+  },
+  {
+    "file": "The_Mississippi_at_Saint_Anthony_Falls_Bridge_No_3",
+    "caption": "The Mississippi at Saint Anthony Falls Bridge No. 3, acrylic and oil on canvas, 30\" x 30\", 2015 (Private Collection.)"
+  },
+  {
+    "file": "Silver_Rings_No_1_36x36_inches_oil_and_acrylic_on_canvas_2015",
+    "caption": "Silver Rings No. 1, oil and acrylic on canvas, 36\" x 36\", 2015 "
+  },
+  {
+    "file": "Charbonneau_The_Mississippi_at_the_Saint_Anthony_Falls_Bridge",
+    "caption": "The Mississippi at the Saint Anthony Falls Bridge, acrylic and oil on canvas, 92\" x 92\", 2013 (Private Collection)"
+  },
+  {
+    "file": "DSC_0191",
+    "caption": "The Caribbean Sea No. 5, acrylic and oil on canvas, 32.5\" x 48\", 2017 (Private collection.)"
+  }
+			
+			
+			
+    ]}
+
+    var output="<ul>";
+    for (var i in data.pieces) {
+        output+="<li><a id='"+data.pieces[i].file+"' class='thumb' href='#'><img class='lazy' alt='Artwork by Ed Charbonneau' src='images/spinner.gif' data-original='//res.cloudinary.com/dhkhn6bll/image/upload/"+data.pieces[i].file+"' data-large='//res.cloudinary.com/dhkhn6bll/image/upload/q_auto/"+ data.pieces[i].file+".jpg'></a><span class='caption'>"+ data.pieces[i].caption+"</span></li>";
+    }
+    output+="</ul><div class='unfilter'><a>All artwork.</a></div>";
+
+    document.getElementById("placeholder").innerHTML=output;
+</script><script>
+
+
+$(function() {
+	
+// Displays the image defined by view parameter ie. ?view=Paristexas1984
+	
+if(window.location.href.indexOf("view") > -1) {
+	var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+	var theArt= getUrlParameter('view');
+	var tbg = $('#'+theArt+' img').attr('data-large')
+	var cap = $('#'+theArt).next().html()
+	var tags = $('#'+theArt).attr('data-tags')
+
+
+	$('.full .frame').fadeIn(1000).css("background-image", "url("+tbg+")");
+	$('.full .specs').html(cap);
+	$('.thumb').removeClass('active');
+	$('#'+theArt).addClass('active');
+	$('.full .caption').fadeIn();
+	$('.full .caption-toggle').show();
+	$('.popout').attr("href", tbg);
+
+    }
+
+// Automatically displays the first image of the gallery if the url contains #art
+    if ( document.location.href.indexOf('#art') > -1 ) {
+		var first = $('.thumbs li:first-child img')
+        var tbg = $(first).attr('data-large')
+		var cap = $(first).parent().next().html()
+		$('.full .caption').fadeIn();
+		$('.intro').fadeOut();
+		$('.full').show().addClass("spinning");
+		$('.full .frame').fadeIn(1000).css("background-image", "url("+tbg+")");
+		$('.full .specs').html(cap);
+		$('.popout').attr("href", tbg);
+		$('.thumb').removeClass('active');
+		$(first).parent().addClass('active');
+		$('.close').show();
+    }
+
+
+});
+
+
+
+// Thumbnails fade in on page load
+$('.thumbs').fadeIn(500);
+$('.thumb img').parent().css('display','inline-block').addClass('active');
+
+// Displays the large image (with caption, etc) when a thumbnail is clicked
+$('.thumbs a').on('click', function(){
+	var tbg = $(this).children('img').attr('data-large')
+	var cap = $(this).next().html()
+	var tags = $(this).attr('data-tags')
+	$('.full').show().addClass("spinning");
+	$('.full .caption').fadeIn();
+	$('.full .caption-toggle').show();
+	$('.intro').fadeOut();
+	$('.full .frame').fadeIn(1000).css("background-image", "url("+tbg+")");
+	$('.full .specs').html(cap);
+	$('.popout').attr("href", tbg);
+	$('.thumb').removeClass('active');
+	$(this).addClass('active');
+	$('.close').show();
+	$('.full .tags').addClass(tags);
+	
+	
+	
+	
+});
+
+// Slides in Captions on mobile 
+$('.caption-toggle').click(function(){
+	$('.full .caption').toggleClass('active');
+	if ($('.full .caption').hasClass('active')) {
+		$('.full .caption').animate({
+		left: "0"
+	  })
+	}
+	else {
+		$('.full .caption').animate({
+		left: "-100%"
+	  })
+	}
+});
+
+
+
+// filters thumbnails 
+$('.filter').click(function() {
+	var a = $(this).attr('id');
+	var b = $('.thumb img');
+	$('.thumb').addClass('active').hide();
+	$('.full .frame').hide();
+	$('.full .caption').hide();
+	$('.full .caption-toggle').hide();
+	$('.intro').hide();
+	$('.unfilter').show();
+	if (b.hasClass(a)) {
+	$('.thumbs .'+a).parent().css('display', 'inline-block');
+	}
+});
+$('.unfilter a').click(function(){
+	$('.thumb').addClass('active').css('display', 'inline-block');
+	$('.intro').show();
+	$(this).parent().hide();
+});
+
+// Closes the large image on mobile devices
+$('.close').click(function(){
+	$(this).hide();
+	$('.full').fadeOut();
+	$('.full .frame').fadeOut();
+	$('.full .caption').fadeOut();
+	$('.full .caption-toggle').fadeOut();
+});
+
+// Toggles the mobile navigation
+$('.burger').click(function(){
+	$('.nav .menu').slideToggle();
+});
+
+
+// enables touch swipe scrolling 
+$(".frame").touchwipe({
+     wipeLeft: function() {
+	 	var tbg = $('.thumb.active').parent().next().find('img').attr('data-large')
+		var cap = $('.thumb.active').parent().next().find('.caption').html()
+		$('.thumb').removeClass('deactivating');
+		$('.full .frame').css("background-image", "url("+tbg+")");
+		$('.full .specs').html(cap);
+		$('.popout').attr("href", tbg);
+		$('.thumb.active').addClass('deactivating').removeClass('active');
+		$('.thumb.deactivating').parent().next().children('.thumb').addClass('active');
+		$('.full .tags').addClass(tags);
+	}, 
+	wipeRight: function() {
+	 	var tbg = $('.thumb.active').parent().prev().find('img').attr('data-large')
+		var cap = $('.thumb.active').parent().prev().find('.caption').html()
+		$('.thumb').removeClass('deactivating');
+		$('.full .frame').css("background-image", "url("+tbg+")");
+		$('.full .specs').html(cap);
+		$('.popout').attr("href", tbg);
+		$('.thumb.active').addClass('deactivating').removeClass('active');
+		$('.thumb.deactivating').parent().prev().children('.thumb').addClass('active');
+		$('.full .tags').addClass(tags);
+	},
+	    
+     min_move_x: 20,
+     min_move_y: 20,
+     preventDefaultEvents: true
+});
+
+// enables lazy loading (images load when scrolled into the viewport)
+$(function() {
+    $("img.lazy").lazyload({
+        event : "sporty"
+    });
+});
+
+$(window).bind("load", function() {
+    var timeout = setTimeout(function() {
+        $("img.lazy").trigger("sporty")
+    }, 5000);
+});
+
+
+
+;
+	
+
+</script> 
+
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QXKMGM12EG"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QXKMGM12EG');
+</script>
+</body>
+</html>
